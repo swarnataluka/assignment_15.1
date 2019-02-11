@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="js no-touchevents" lang="en">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Arrivals</title>
+	<link async rel="stylesheet" href="./styles/style.css">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#29BDBB">
+    <link rel="icon" sizes="144x144" href="./images/launcher-icon-144.png">
+</head>
+<body>
+    <header>
+        <div class="content">
+            <h3>Arrivals</h3>
+        </div>
+    </header>
+    <div class="container">
+        <div id="main" class="content">
+            <ul class="arrivals-list" data-bind="foreach:arrivals">
+                <li class="item">
+                    <span class="title" data-bind="html:title"></span>
+                    <span class="status" data-bind="html:status"></span>
+                    <span class="time" data-bind="html:time"></span>
+                </li>
+            </ul>
+        </div>
+    </div>	
+    <script src="./scripts/build/vendor.min.js"></script>
+    <script src="./scripts/build/script.min.js"></script>
+	<script src="./scripts/vendor/knockout-3.3.0.js"></script>
+	<script src="./scripts/build/jquery.js"></script>
+</body>
+</html>
